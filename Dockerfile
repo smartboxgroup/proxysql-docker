@@ -17,7 +17,7 @@ RUN mkdir -p /root/.ssh
 COPY ./run.sh ./build.sh /
 RUN chmod +x /*.sh
 
-ENV GIT_BRANCH "master"
+ENV GIT_BRANCH "v1.1.1"
 ENV GIT_REPO "https://github.com/sysown/proxysql.git"
 
 ENV CONF_FILE "/etc/proxysql/proxysql.cnf"
