@@ -12,12 +12,13 @@ VOLUME /tmp
 
 ADD ./proxysql.cnf.template /opt/
 RUN mkdir -p /etc/proxysql
+RUN mkdir -p /root/.ssh
 
 COPY ./run.sh ./build.sh /
 RUN chmod +x /*.sh
 
 ENV GIT_BRANCH "master"
-ENV GIT_REPO "https://github.com/renecannao/proxysql.git"
+ENV GIT_REPO "https://github.com/sysown/proxysql.git"
 
 ENV CONF_FILE "/etc/proxysql/proxysql.cnf"
 ENV DATA_DIR "/var/run/proxysql"
